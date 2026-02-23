@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenceCore AI Lab | Gini AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .hero-logo { width: 450px; transition: transform 0.5s ease; } /* Enlarged Logo */
+        .hero-logo:hover { transform: scale(1.05); }
+        .video-container { border-radius: 40px; overflow: hidden; border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 0 60px rgba(0, 242, 255, 0.1); }
+        .audio-btn { position: fixed; bottom: 40px; right: 40px; z-index: 1000; box-shadow: 0 0 20px rgba(0, 242, 255, 0.5); }
+
+        /* Video Section */
+    .video-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:110px 10%;
+    text-align:center;
+    }
+    /* video{
+        width:100%;
+        max-width:900px;
+        border-radius:30px;
+        box-shadow:0 0 140px rgba(0,255,255,.2);
+        margin-top:40px;
+    } */
+    /* Sections */
+.section{
+padding:150px 10%;
+text-align:center;
+}
+.section h2{
+font-size:3.2rem;
+font-weight:900;
+letter-spacing:-1px;
+background:linear-gradient(90deg,#00b3ff,#00ffcc);
+-webkit-background-clip:text;
+color:transparent;
+}
+.section p{
+font-size:1.2rem;
+opacity:.7;
+margin-top:18px;
+}
+
+
+
+
+/* Glass Cards */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:110px 10%;
+}
+.card{
+background:rgba(0,255,255,.05);
+border:1px solid rgba(0,255,255,.12);
+backdrop-filter:blur(20px);
+padding:30px;
+border-radius:22px;
+font-size:1.15rem;
+box-shadow:0 0 30px rgba(0,255,255,.15);
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+background:rgba(0,255,255,.1);
+}
+
+    /* Footer */
+    footer{
+    padding:60px;
+    text-align:center;
+    opacity:.6;
+    font-size:.9rem;
+    }
+
+    /* CTA */
+    .cta{
+padding:170px 10%;
+text-align:center;
+background:linear-gradient(180deg,#000814,#001a2f);
+    }
+    button{
+    padding:16px 36px;
+    border-radius:999px;
+    border:none;
+    background:linear-gradient(90deg,#00f5ff,#00b3ff,#00ffcc);
+    color:#000;
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    margin:10px;
+    box-shadow:0 0 30px rgba(0,255,255,.4);
+    }
+    button:hover{transform:scale(1.05);}  
+    
+    
+    </style>
+    
+</head>
+<body>
+
+    <!-- <button id="unmute" class="audio-btn bg-cyan-500 text-black px-8 py-4 rounded-full font-black tracking-tighter hover:bg-white transition-all">
+        UNMUTE EXPERIENCE 🔊
+    </button> -->
+
+    <!-- <nav class="p-8 flex justify-between items-center absolute w-full z-10">
+        <img src="logo.png" alt="Logo" class="h-12 opacity-80"> <div class="text-[10px] font-bold tracking-[0.4em] text-cyan-400">UKRI & NHS PARTNER</div>
+    </nav> -->
+
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+        <div class="mb-16 text-center">
+            <img src="logo.png" alt="SenceCore AI Lab" class="hero-logo mx-auto mb-8">
+            <h1 class="text-7xl font-black tracking-tighter mb-4">Gini <span class="text-cyan-400 italic">AI</span></h1>
+            <p class="text-gray-400 max-w-xl mx-auto uppercase tracking-widest text-xs">Where Sensing Meets Intelligence</p>
+        </div>
+        <div class="w-full h-auto overflow-hidden shadow-[0_0_100px_rgba(0,242,255,0.15)]">
+            <video id="v1" controls autoplay muted loop class="w-full h-full object-cover">
+                <source src="AI_Smart_Ring_Video_Generation.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- <div class="w-full max-w-6xl video-container">
+            <video id="v1" controls autoplay muted loop  class="w-full">
+                <source src="AI_Smart_Ring_Video_Generation.mp4" type="video/mp4">
+            </video>
+        </div> -->
+    </section>
+
+    <!-- Founder -->
+    <section id="founder" class="py-32 px-10 bg-gradient-to-b from-black to-zinc-950">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
+            
+            <div class="md:w-1/3 reveal">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
+                        <img src="Amit_saxena.png" alt="Amit Saxena" class="w-full h-auto grayscale hover:grayscale-0 transition duration-500">
+                        <div class="p-6 bg-zinc-900/90 backdrop-blur-md">
+                            <h3 class="text-xl font-bold">Amit Saxena</h3>
+                            <p class="text-cyan-400 text-xs tracking-widest uppercase mt-1">Founder & Lead Innovator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="md:w-2/3 reveal">
+                <h2 class="text-xs tracking-[0.4em] text-zinc-500 font-bold mb-6 uppercase">The Visionary</h2>
+                <blockquote class="text-3xl md:text-4xl font-light leading-tight mb-8">
+                    “SenseCore AI Lab is building the world’s first <span class="text-white font-bold">NHS-focused AI Smart Ring</span> platform to predict disease early, reduce hospital burden, and transform ageing healthcare from reactive to preventive care.”
+                </blockquote>
+                <p class="text-zinc-400 leading-relaxed mb-6">
+                    Under the leadership of Amit Saxena, the lab is pioneering 'Invisible Intelligence.' By merging advanced AI nodes with the Gini Ring interface, we are creating a proactive health shield designed specifically for the UK healthcare ecosystem and the Global Talent Network.
+                </p>
+                <div class="flex gap-4">
+                    <div class="h-[1px] w-12 bg-cyan-500 self-center"></div>
+                    <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-500">Scaleable Innovation for UKRI & NHS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-10 bg-zinc-950">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="video-container">
+                <video id="v2" controls autoplay muted loop class="w-full">
+                    <source src="AI_Video_Generation_and_Support_Statement-3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <h2 class="text-5xl font-bold mb-8 italic">Gini AI . Smart Ring . <br><span class="text-cyan-400">Enables NHS.</span></h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    Gini AI Smart Ring enables NHS to predict, prevent, and manage chronic diseases remotely, 
+                    reducing hospital admissions and improving elderly care outcomes through AI-powered continuous health monitoring.....
+                </p>
+                <div class="flex gap-8 items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" class="h-8 invert opacity-50">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/UK_Research_and_Innovation_logo.svg" class="h-8 invert opacity-50">
+                    <!-- <span class="text-xs font-bold tracking-widest border-l border-zinc-800 pl-8">UK RESEARCH & INNOVATION</span> -->
+                    
+                </div>
+            </div>
+            <!-- <div>
+                <h2 class="text-5xl font-bold mb-8 italic">Innovate. Support. <br><span class="text-cyan-400">Collaborate.</span></h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    SenceCore AI Lab is committed to the digital transformation of the UK National Health Service. 
+                    Gini AI provides the clinical-grade data required for proactive, preventative care.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/NHS-Logo.svg" class="h-8 invert opacity-50">
+                    <span class="text-xs font-bold tracking-widest border-l border-zinc-800 pl-8">UK RESEARCH & INNOVATION</span>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+<section class="features">
+    <div class="card">❤️ Heart Rate, HRV, Sleep, Temperature, SpO₂</div>
+    <div class="card">🧠 AI Chronic Disease Risk Prediction</div>
+    <div class="card">📡 Real-time Population Health Monitoring</div>
+    <div class="card">🔬 Research platform for NHS, UKRI, and universities</div>
+    </section>
+
+    <!-- AI DASHBOARD --> 
+ <section class="dashboard"> 
+    <h2 style="font-size:2.8rem;text-align:center;">AI Health Dashboard for Patients & Clinicians</h2> 
+    <p style="text-align:center;opacity:.7;">Population health monitoring, risk triage, and AI insights</p> 
+    <!-- <img src="gini-ui.png">  -->
+</section>
+    
+
+    <section class="py-32 px-10 bg-zinc-950">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-bold mb-8 italic">Gini AI . Smart Ring . <br><span class="text-cyan-400">Enables NHS.</span></h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    Gini AI Smart Ring enables NHS to predict, prevent, and manage chronic diseases remotely, 
+                    reducing hospital admissions and improving elderly care outcomes through AI-powered continuous health monitoring.....
+                </p>
+                <div class="flex gap-8 items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/National_Health_Service_%28England%29_logo.svg" class="h-8 invert opacity-50">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/UK_Research_and_Innovation_logo.svg" class="h-8 invert opacity-50">
+                    <!-- <span class="text-xs font-bold tracking-widest border-l border-zinc-800 pl-8">UK RESEARCH & INNOVATION</span> -->
+                    
+                </div>
+            </div>
+
+            <div class="video-container">
+                <video id="v2" controls autoplay muted loop class="w-full">
+                    <source src="Data_dashboard.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-container">
+                <video id="v2" controls autoplay muted loop class="w-full">
+                    <source src="Video_Logo_Replacement_Generated.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-container">
+                <video id="v2" controls autoplay muted loop class="w-full">
+                    <source src="Video_Ring_Replacement_Service.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        
+    </section>
+
+    
+
+    <section class="py-32 px-10 bg-zinc-950">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="video-container">
+                <video id="v2" autoplay muted loop playsinline class="w-full">
+                    <source src="smart_ring_alert_animation.mp4" type="video/mp4">
+                    
+                </video>
+                <video id="v2" autoplay muted loop playsinline class="w-full">
+                    <source src="smart_ring_health_ui_premium.mp4" type="video/mp4">
+                </video>
+                <video id="v2" autoplay muted loop playsinline class="w-full">
+
+                    <source src="smart_ring_screenless_animation.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <h2 class="text-5xl font-bold mb-8 italic">Innovate. Support. <br><span class="text-cyan-400">Collaborate.</span></h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    SenceCore AI Lab is committed to the digital transformation of the UK National Health Service. 
+                    Gini AI provides the clinical-grade data required for proactive, preventative care.
+                </p>
+                <!-- <div class="flex gap-8 items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/NHS-Logo.svg" class="h-8 invert opacity-50">
+                    <span class="text-xs font-bold tracking-widest border-l border-zinc-800 pl-8">UK RESEARCH & INNOVATION</span>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA
+    <section class="cta">
+    <h2>Building the future of healthcare intelligence.</h2>
+    <p>Partnering with NHS, universities, and global investors.</p>
+    <button>Download Pitch Deck</button>
+    <button>View Research</button>
+    </section> -->
+
+    <footer>
+        © 2026 SenseCore AI Labs — Where Sensing Meets Intelligence
+        </footer>
+
+    <!-- <script>
+        const btn = document.getElementById('unmute');
+        const videos = [document.getElementById('v1'), document.getElementById('v2')];
+        btn.onclick = () => {
+            videos.forEach(v => v.muted = !v.muted);
+            btn.innerText = videos[0].muted ? "UNMUTE EXPERIENCE 🔊" : "MUTE AUDIO 🔇";
+            btn.style.backgroundColor = videos[0].muted ? "#06b6d4" : "#fff";
+        };
+    </script> -->
+</body>
+</html>
